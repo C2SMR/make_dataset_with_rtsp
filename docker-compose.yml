@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  make_dataset:
+    build: .
+    container_name: make_dataset
+    environment:
+      PATH_API: ${PATH_API}
+      PASSWORD_API: ${PASSWORD_API}
+      TIMEOUT_PICTURE: ${TIMEOUT_PICTURE}
+    volumes:
+      - ./dataset:/dataset
